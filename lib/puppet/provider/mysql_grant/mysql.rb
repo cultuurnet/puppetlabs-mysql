@@ -88,7 +88,7 @@ Puppet::Type.type(:mysql_grant).provide(:mysql, parent: Puppet::Provider::Mysql)
                                          'PERSIST_RO_VARIABLES_ADMIN', 'REPLICATION_APPLIER', 'REPLICATION_SLAVE_ADMIN', 'RESOURCE_GROUP_ADMIN', 'RESOURCE_GROUP_USER',
                                          'ROLE_ADMIN', 'SENSITIVE_VARIABLES_OBSERVER', 'SERVICE_CONNECTION_ADMIN', 'SESSION_VARIABLES_ADMIN', 'SET_USER_ID', 'SHOW_ROUTINE',
                                          'SYSTEM_USER', 'SYSTEM_VARIABLES_ADMIN', 'TABLE_ENCRYPTION_ADMIN', 'TELEMETRY_LOG_ADMIN', 'XA_RECOVER_ADMIN']
-￼
+
         if (newer_than('mysql' => '8.0.0') && sorted_privileges == mysql_v8_privileges) || sorted_privileges == mysql_pre_v8_privileges_one || sorted_privileges == mysql_pre_v8_privileges_two || sorted_privileges == mysql_pre_v8_privileges_three
           sorted_privileges = ['ALL']
         end
